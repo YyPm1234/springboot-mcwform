@@ -1,0 +1,1659 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "05b5d5cc-fd12-45a5-911f-0165624231b2",
+        "name": "mcwForm"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "170586c8-1196-44d7-9de6-8c5424cac04c",
+            "name": "Admin"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "userId",
+                        "value": "3"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "info",
+                        "value": "22"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "banTime",
+                        "value": "2020-10-19 21:47:51"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/admin/ban"
+                },
+                "id": "6b1689ff-f74b-409e-8419-e3065c6ded36",
+                "name": "ban",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25iXEcyiI6KDfshz6WRCcPBIKwipj3tFa2AC7YXYO3MK3h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "userId",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/admin/banCheck"
+                },
+                "id": "47e4cedd-8dd1-43b9-a9b5-afdf9df39682",
+                "name": "banCheck",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25iXEcyiI6KDfshz6WRCcPBIKwipj3tFa2AC7YXYO3MK3h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "page",
+                        "value": "1"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "pageSize",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "order",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "desc",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/admin/banSearch"
+                },
+                "id": "4b68ddbd-aaa2-4abf-b45e-b10cc2711508",
+                "name": "banSearch",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25iXEcyiI6KDfshz6WRCcPBIKwipj3tFa2AC7YXYO3MK3h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "type": "Text",
+                        "name": "page",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "pageSize",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "desc",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "order",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "method",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/admin/logSearch"
+                },
+                "id": "f54436c1-ca1a-4da3-9f9a-7cfe16f62b58",
+                "name": "logSearch",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25iXEcyiI6KDfshz6WRCcPBIKwipj3tFa2AC7YXYO3MK3h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/admin/unban"
+                },
+                "id": "e51c4c19-7751-4f46-a9eb-4df033f598eb",
+                "name": "unban",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": ""
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "e115c520-da45-4fc7-a961-2c7d177607d0",
+            "name": "Form"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "formId",
+                        "value": "2"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "state",
+                        "value": "0"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/form/adminChangeState"
+                },
+                "id": "7398cace-3434-4d44-91b8-8e0806932c27",
+                "name": "adminChangeState",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "formId",
+                        "value": "3"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/form/adminDeleteForm"
+                },
+                "id": "e5bba611-0054-4073-876e-92afba645b27",
+                "name": "adminDeleteForm",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23MjHZUA2P/mcELfcYNoTKvWYNcLxzukK6fulhpGXWxyRAQFfgENRezkRhtVa5tTgA=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "type": "Text",
+                        "name": "title",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "state",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "startTime",
+                        "value": "2020-09-30 13:00:01"
+                      },
+                      {
+                        "type": "Text",
+                        "name": "endTime",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "page",
+                        "value": "2"
+                      },
+                      {
+                        "type": "Text",
+                        "name": "pageSize",
+                        "value": "1"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "formId",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/form/searchForm"
+                },
+                "id": "d3728e31-e916-47f0-b58f-41686f4fb7b6",
+                "name": "searchForm",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "title",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "state",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "startTime",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "endTime",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "formId",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/form/searchTitle"
+                },
+                "id": "548eda25-11ab-4fc4-9cab-2250eeef6f5e",
+                "name": "searchTitle",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "9ec5f543-433d-4067-be32-4a707d83d6e1",
+            "name": "Replay"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "replyId",
+                        "value": "5"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "state",
+                        "value": "0"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/reply/adminChangeState"
+                },
+                "id": "b1aa0967-2cc8-487e-b846-95b28aebd8ab",
+                "name": "adminChangeState",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "replyId",
+                        "value": "6"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/reply/adminDeleteReply"
+                },
+                "id": "db201d98-e8cb-4138-81dd-993fff77210b",
+                "name": "adminDeleteReply",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "formId",
+                        "value": "1"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "parentId",
+                        "value": "2"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "content",
+                        "value": "eeeeee"
+                      },
+                      {
+                        "type": "Text",
+                        "name": "floor",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/reply/doReply"
+                },
+                "id": "1b2051a9-9aa6-4426-9826-8535c4006134",
+                "name": "doReply",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "multipart/form-data",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "File",
+                        "name": "file"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/reply/doUpdatePic"
+                },
+                "id": "e8db796d-6cfe-4f72-825a-8423fd3e257f",
+                "name": "doUpdatePic",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "multipart/form-data"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25kFJr4o8WzdI0ADeZ5U1FzQIXRack+mPIsr+4xx6FyDRAQFfgENRezkRhtVa5tTgA=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "type": "Text",
+                        "name": "content",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "state",
+                        "value": "1"
+                      },
+                      {
+                        "type": "Text",
+                        "name": "startTime",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "endTime",
+                        "value": ""
+                      },
+                      {
+                        "type": "Text",
+                        "name": "formId",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/reply/searchReply"
+                },
+                "id": "9f5fead6-487f-492f-89ad-9030ca639fa1",
+                "name": "searchReply",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "41f014d5-e09c-451b-8371-b14280f9d8cc",
+            "name": "User"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/doQuit"
+                },
+                "id": "ac0e0f62-a17f-41b4-a801-65776c709a10",
+                "name": "doQuit",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj225tK7opMPmsKxZROCiR/AKrtZtRql36mqRqbbvGV0L5RAQFfgENRezkRhtVa5tTgA=="
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "multipart/form-data",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "File",
+                        "name": "file"
+                      },
+                      {
+                        "type": "Text",
+                        "name": "userId",
+                        "value": "12"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/doUploadIcon"
+                },
+                "id": "066becec-d421-43f9-894b-585dcde8a37f",
+                "name": "doUploadIcon",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "multipart/form-data"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj25iXEcyiI6KDfshz6WRCcPBIKwipj3tFa2AC7YXYO3MK3h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "mailPhone",
+                        "value": "2464844931@qq.com"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/getForgetToken"
+                },
+                "id": "d514898e-7783-4b09-aa47-68e1c2704e62",
+                "name": "getForgetToken",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "to",
+                        "value": "2464844931@qq.com"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "type",
+                        "value": "RESIGN"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/getVerification"
+                },
+                "id": "a8e89106-40bc-4013-a00c-34c290096891",
+                "name": "getVerification",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "username",
+                        "value": "asd"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "password",
+                        "value": "asd"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form",
+                  "textBody": "user{username=\"asd\",password=\"asd\"}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/login"
+                },
+                "id": "f0f0b084-f48c-4e5d-9ce0-6f7dd8005391",
+                "name": "login",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj2/t+dGhJyNY5uHSdSpI6FrdnmppgNJmOuJ+xEPc/8gH/RAQFfgENRezkRhtVa5tTgA=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "oldPwd",
+                        "value": "asddd"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "newPwd",
+                        "value": "asd"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form",
+                  "textBody": "{\n    \"auth\": {\n        \"identity\": {\n            \"methods\": [\n                \"password\"\n            ],\n            \"password\": {\n                \"user\": {\n                    \"domain\": {\n                        \"name\": \"IAMDomain\"\n                    },\n                    \"name\": \"IAMUser\",\n                    \"password\": \"IAMPassword\"\n                }\n            }\n        },\n        \"scope\": {\n            \"domain\": {\n                \"name\": \"IAMDomain\"\n            }\n        }\n    }\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/doPwdChange"
+                },
+                "id": "4740ee44-868f-4fda-9404-58c174fd1d44",
+                "name": "pwdChange",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "2GeTdyFRsu21AKkjP9tbxc9C9NIfWdnFpF0ggnd9KocdUfVbpwcPDVTJKgVLd1TEQPHIicCogML066vnTZCq/Q=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "token",
+                        "value": "3NEaISK561yQlY5BYCihsgcMfwwQlU9YzDHE/lCzpWUbOnd4D3yQF1QDCr9dmq/i"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "newPwd",
+                        "value": "asd"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/pwdReset"
+                },
+                "id": "bb778242-c973-463f-9beb-109999031a15",
+                "name": "pwdReset",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "username",
+                        "value": "asdd"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "password",
+                        "value": "asd"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "mail",
+                        "value": "2464844931@qq.com"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "verification",
+                        "value": "DBT629"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/resign"
+                },
+                "id": "6e5e7a54-195c-4098-b9e0-1d4107cfabad",
+                "name": "resign",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "id",
+                        "value": "121"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/doSelectByPrimaryKey"
+                },
+                "id": "e47db831-6579-4210-a5b0-521c97a9beab",
+                "name": "selectByPrimaryKey",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj2x22SqL2L2fy+SpNMVoVMRk7S7IJBiXza5Vi8SFcpj2YRAQFfgENRezkRhtVa5tTgA=="
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/user/adminUserList"
+                },
+                "id": "416fc80b-f039-4677-9d20-70ef2e9d20a2",
+                "name": "userList",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj2x22SqL2L2fy+SpNMVoVMRk7S7IJBiXza5Vi8SFcpj2YRAQFfgENRezkRhtVa5tTgA=="
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "entity": {
+            "type": "Service",
+            "id": "2375bc85-5751-42c3-9d71-295fcdef3211",
+            "name": "modular"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "modularName",
+                        "value": "asddwqdqsss"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/modular/adminAdd"
+                },
+                "id": "05ec7467-ba37-4078-9dff-0c27c1d0bf9d",
+                "name": "adminAdd",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "modularId",
+                        "value": "3"
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "state",
+                        "value": "0"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/modular/adminChangeState"
+                },
+                "id": "faabf964-c37b-4085-8e5b-e2ec7fb7be28",
+                "name": "adminChangeState",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "modularId",
+                        "value": "4"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/modular/adminDelete"
+                },
+                "id": "941edb8c-cce3-4cfb-8377-3955ad5529d7",
+                "name": "adminDelete",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+                  "name": "POST"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "modularName",
+                        "value": ""
+                      },
+                      {
+                        "enabled": true,
+                        "type": "Text",
+                        "name": "state",
+                        "value": "1333131"
+                      }
+                    ]
+                  },
+                  "bodyType": "Form"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:8088",
+                  "path": "/modular/getModular"
+                },
+                "id": "07751c77-d7af-46b2-8bd1-5138f930a043",
+                "name": "getModular",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "name": "Json-Web-Token",
+                    "value": "M1HG5+TsB7HMTQoap9tj23K2DAXlEbPacSsd0jVW1jI7Pm7EcbBBqEvmWbJHhC653h43AXT8EnVKk0I32ISaNQ=="
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

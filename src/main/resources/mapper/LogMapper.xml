@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zone.mcw.mcwzone.springbootmcwform.dao.LogMapper">
+    <insert id="insertByEntity">
+        insert into log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="logId != null">
+                log_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="ip != null">
+                ip,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="classMethod != null">
+                class_method,
+            </if>
+            <if test="success != null">
+                success,
+            </if>
+            <if test="args != null">
+                args,
+            </if>
+            <if test="level != null">
+                level,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="logId != null">
+                #{logId},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="ip != null">
+                #{ip},
+            </if>
+            <if test="time != null">
+                #{time},
+            </if>
+            <if test="classMethod != null">
+                #{classMethod},
+            </if>
+            <if test="success != null">
+                #{success},
+            </if>
+            <if test="args != null">
+                #{args},
+            </if>
+            <if test="level != null">
+                #{level},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey">
+        update log
+        set
+            user_id = #{userId}
+            ip = #{ip}
+            time = #{time}
+            class_method = #{classMethod}
+            success = #{success}
+            args = #{args}
+            level= #{level},
+        where log_id = #{logId}
+    </update>
+    <update id="updateEntityByEntity">
+        update log
+        set
+        <trim suffixOverrides=",">
+            <if test="newRecord.userId != null">
+                user_id = #{newRecord.userId} ,
+            </if>
+            <if test="newRecord.ip != null">
+                ip = #{newRecord.ip} ,
+            </if>
+            <if test="newRecord.time != null">
+                time = #{newRecord.time} ,
+            </if>
+            <if test="newRecord.classMethod != null">
+                class_method = #{newRecord.classMethod} ,
+            </if>
+            <if test="newRecord.success != null">
+                success = #{newRecord.success} ,
+            </if>
+            <if test="newRecord.args != null">
+                args = #{newRecord.args} ,
+            </if>
+            <if test="newRecord.level != null">
+                level = #{newRecord.level} ,
+            </if>
+        </trim>
+        where
+        <trim suffixOverrides="and">
+            <if test="oldRecord.logId != null">
+                log_id = #{oldRecord.logId} and
+            </if>
+            <if test="oldRecord.userId != null">
+                user_id = #{oldRecord.userId} and
+            </if>
+            <if test="oldRecord.ip != null">
+                ip = #{oldRecord.ip} and
+            </if>
+            <if test="oldRecord.time != null">
+                time = #{oldRecord.time} and
+            </if>
+            <if test="oldRecord.classMethod != null">
+                class_method = #{oldRecord.classMethod} and
+            </if>
+            <if test="oldRecord.success != null">
+                success = #{oldRecord.success} and
+            </if>
+            <if test="oldRecord.args != null">
+                args = #{oldRecord.args} and
+            </if>
+            <if test="oldRecord.level != null">
+                level = #{oldRecord.level} ,
+            </if>
+        </trim>
+    </update>
+    <delete id="deleteByPrimaryKey">
+    delete from log
+    where log_id = #{logId}
+    </delete>
+    <select id="selectByEntity" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Log">
+        select * from log
+        <trim suffixOverrides=" and ">
+            <if test="logId != null||userId != null||ip != null||time != null||classMethod != null||success != null||args != null">
+                where
+            </if>
+            <if test="logId != null">
+                log_id = #{logId} and
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} and
+            </if>
+            <if test="ip != null">
+                ip = #{ip} and
+            </if>
+            <if test="time != null">
+                time = #{time} and
+            </if>
+            <if test="classMethod != null">
+                class_method = #{classMethod} and
+            </if>
+            <if test="success != null">
+                success = #{success} and
+            </if>
+            <if test="args != null">
+                args = #{args} and
+            </if>
+            <if test="level != null">
+                level = #{level} and
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityOr" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Log">
+        select * from log
+        <trim suffixOverrides=" or ">
+            <if test="logId != null||userId != null||ip != null||time != null||classMethod != null||success != null||args != null">
+                where
+            </if>
+            <if test="logId != null">
+                log_id = #{logId} or
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} or
+            </if>
+            <if test="ip != null">
+                ip = #{ip} or
+            </if>
+            <if test="time != null">
+                time = #{time} or
+            </if>
+            <if test="classMethod != null">
+                class_method = #{classMethod} or
+            </if>
+            <if test="success != null">
+                success = #{success} or
+            </if>
+            <if test="args != null">
+                args = #{args} or
+            </if>
+            <if test="level != null">
+                level = #{level} or
+            </if>
+        </trim>
+    </select>
+    <select id="selectByPage" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Log">
+        select * from log where 1=1
+        order by ${order}
+        <if test="desc==1">
+            desc
+        </if>
+        limit #{startPage},#{pageSize}
+    </select>
+</mapper>

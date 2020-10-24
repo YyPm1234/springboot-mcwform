@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zone.mcw.mcwzone.springbootmcwform.dao.BanMapper">
+
+    <insert id="insertByEntity">
+        insert into ban
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="banId != null">
+                ban_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="adminId != null">
+                admin_id,
+            </if>
+            <if test="unbanTime != null">
+                unban_time,
+            </if>
+            <if test="info != null">
+                info,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="banId != null">
+                #{banId},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="adminId != null">
+                #{adminId},
+            </if>
+            <if test="unbanTime != null">
+                #{unbanTime},
+            </if>
+            <if test="info != null">
+                #{info},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey">
+      update ban
+        set
+            user_id = #{userId}
+            admin_id = #{adminId}
+            unban_time = #{unbanTime}
+            info = #{info}
+        where ban_id = #{banId}
+  </update>
+    <update id="updateEntityByEntity">
+        update ban
+        set
+        <trim suffixOverrides=",">
+            <if test="newRecord.userId != null">
+                user_id = #{newRecord.userId} ,
+            </if>
+            <if test="newRecord.adminId != null">
+                admin_id = #{newRecord.adminId} ,
+            </if>
+            <if test="newRecord.unbanTime != null">
+                unban_time = #{newRecord.unbanTime} ,
+            </if>
+            <if test="newRecord.info != null">
+                info = #{newRecord.info} ,
+            </if>
+        </trim>
+        where
+        <trim suffixOverrides="and">
+            <if test="oldRecord.banId != null">
+                ban_id = #{oldRecord.banId} and
+            </if>
+            <if test="oldRecord.userId != null">
+                user_id = #{oldRecord.userId} and
+            </if>
+            <if test="oldRecord.adminId != null">
+                admin_id = #{oldRecord.adminId} and
+            </if>
+            <if test="oldRecord.unbanTime != null">
+                unban_time = #{oldRecord.unbanTime} and
+            </if>
+            <if test="oldRecord.info != null">
+                info = #{oldRecord.info} and
+            </if>
+        </trim>
+    </update>
+    <delete id="deleteByPrimaryKey">
+     delete from ban
+    where ban_id = #{banId}
+  </delete>
+    <select id="selectByEntity" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Ban">
+        select * from ban
+        <trim suffixOverrides=" and ">
+            <if test="banId != null||userId != null||adminId != null||unbanTime != null||info != null">
+                where
+            </if>
+            <if test="banId != null">
+                ban_id = #{banId} and
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} and
+            </if>
+            <if test="adminId != null">
+                admin_id = #{adminId} and
+            </if>
+            <if test="unbanTime != null">
+                unban_time = #{unbanTime} and
+            </if>
+            <if test="info != null">
+                info = #{info} and
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityOr" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Ban">
+        select * from ban
+        <trim suffixOverrides=" or ">
+            <if test="banId != null||userId != null||adminId != null||unbanTime != null||info != null">
+                where
+            </if>
+            <if test="banId != null">
+                ban_id = #{banId} or
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} or
+            </if>
+            <if test="adminId != null">
+                admin_id = #{adminId} or
+            </if>
+            <if test="unbanTime != null">
+                unban_time = #{unbanTime} or
+            </if>
+            <if test="info != null">
+                info = #{info} or
+            </if>
+        </trim>
+    </select>
+    <select id="selectByUserIdOrderById" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Ban">
+        SELECT * FROM ban where user_id=#{userId} order by ban_id desc limit 1
+    </select>
+    <select id="selectByPage" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Ban">
+        select * from ban order by ${order}
+        <if test="desc==1">
+            desc
+        </if>
+        limit #{startPage},#{pageSize}
+    </select>
+</mapper>

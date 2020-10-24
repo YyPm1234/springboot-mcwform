@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: url
+    username: username
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    host: host
+    username: username
+    password: password
+    default-encoding: utf-8
+  redis:
+    host: host
+    port: port
+    password: password
+    database:
+      db10: 10
+      db11: 11
+      db12: 12
+      db13: 13
+      db14: 14
+      db15: 15
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: zone.mcw.mcwzone.springbootmcwform.entity
+  configuration:
+    map-underscore-to-camel-case: true
+server:
+  port: 8088
+logging:
+  level:
+    root: info
+    com.mcwForm.dao: debug

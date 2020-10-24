@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zone.mcw.mcwzone.springbootmcwform.dao.ModularMapper">
+    <insert id="insertByEntity">
+        insert into modular
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="modularId != null">
+                modular_id,
+            </if>
+            <if test="modularName != null">
+                modular_name,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="modularId != null">
+                #{modularId},
+            </if>
+            <if test="modularName != null">
+                #{modularName},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="state != null">
+                #{state},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey">
+     update modular
+        set
+            modular_name = #{modularName}
+            create_time = #{createTime}
+            state = #{state}
+        where modular_id = #{modularId}
+  </update>
+    <update id="updateEntityByEntity">
+        update modular
+        set
+        <trim suffixOverrides=",">
+            <if test="newRecord.modularName != null">
+                modular_name = #{newRecord.modularName} ,
+            </if>
+            <if test="newRecord.createTime != null">
+                create_time = #{newRecord.createTime} ,
+            </if>
+            <if test="newRecord.state != null">
+                state = #{newRecord.state} ,
+            </if>
+        </trim>
+        where
+        <trim suffixOverrides="and">
+            <if test="oldRecord.modularId != null">
+                modular_id = #{oldRecord.modularId} and
+            </if>
+            <if test="oldRecord.modularName != null">
+                modular_name = #{oldRecord.modularName} and
+            </if>
+            <if test="oldRecord.createTime != null">
+                create_time = #{oldRecord.createTime} and
+            </if>
+            <if test="oldRecord.state != null">
+                state = #{oldRecord.state} and
+            </if>
+        </trim>
+    </update>
+
+    <delete id="deleteByPrimaryKey">
+        delete from modular
+    where modular_id = #{modularId}
+  </delete>
+    <select id="selectByEntity" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Modular">
+        select * from modular
+        <trim suffixOverrides=" and ">
+            <if test="modularId != null||modularName != null||createTime != null||state != null">
+                where
+            </if>
+            <if test="modularId != null">
+                modular_id = #{modularId} and
+            </if>
+            <if test="modularName != null">
+                modular_name = #{modularName} and
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} and
+            </if>
+            <if test="state != null">
+                state = #{state} and
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityOr" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Modular">
+        select * from modular
+        <trim suffixOverrides=" or ">
+            <if test="modularId != null||modularName != null||createTime != null||state != null">
+                where
+            </if>
+            <if test="modularId != null">
+                modular_id = #{modularId} or
+            </if>
+            <if test="modularName != null">
+                modular_name = #{modularName} or
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} or
+            </if>
+            <if test="state != null">
+                state = #{state} or
+            </if>
+        </trim>
+    </select>
+</mapper>

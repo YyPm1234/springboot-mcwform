@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zone.mcw.mcwzone.springbootmcwform.dao.UserMapper">
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from user
+        where user_id = #{userId}
+    </delete>
+    <insert id="insertByEntity" parameterType="zone.mcw.mcwzone.springbootmcwform.entity.User" useGeneratedKeys="true" keyProperty="userId" keyColumn="user_id">
+        insert into user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time,
+            </if>
+            <if test="admin != null">
+                admin,
+            </if>
+            <if test="mail != null">
+                mail,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="icon != null">
+                icon,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                #{userId},
+            </if>
+            <if test="username != null">
+                #{username},
+            </if>
+            <if test="password != null">
+                #{password},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="lastLoginTime != null">
+                #{lastLoginTime},
+            </if>
+            <if test="admin != null">
+                #{admin},
+            </if>
+            <if test="mail != null">
+                #{mail},
+            </if>
+            <if test="phone != null">
+                #{phone},
+            </if>
+            <if test="icon != null">
+                #{icon},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="zone.mcw.mcwzone.springbootmcwform.entity.User">
+        update user
+        set
+            username = #{username}
+            password = #{password}
+            create_time = #{createTime}
+            last_login_time = #{lastLoginTime}
+            admin = #{admin}
+            mail = #{mail}
+            phone = #{phone}
+            icon = #{icon}
+        where user_id = #{userId}
+    </update>
+    <update id="updateEntityByEntity">
+        update user
+        set
+        <trim suffixOverrides=",">
+            <if test="newRecord.username != null">
+                username = #{newRecord.username} ,
+            </if>
+            <if test="newRecord.password != null">
+                password = #{newRecord.password} ,
+            </if>
+            <if test="newRecord.createTime != null">
+                create_time = #{newRecord.createTime} ,
+            </if>
+            <if test="newRecord.lastLoginTime != null">
+                last_login_time = #{newRecord.lastLoginTime} ,
+            </if>
+            <if test="newRecord.admin != null">
+                admin = #{newRecord.admin} ,
+            </if>
+            <if test="newRecord.mail != null">
+                mail = #{newRecord.mail} ,
+            </if>
+            <if test="newRecord.phone != null">
+                phone = #{newRecord.phone} ,
+            </if>
+            <if test="newRecord.icon != null">
+                icon = #{newRecord.icon} ,
+            </if>
+        </trim>
+        where
+        <trim suffixOverrides="and">
+            <if test="oldRecord.userId != null">
+                user_id = #{oldRecord.userId} and
+            </if>
+            <if test="oldRecord.username != null">
+                username = #{oldRecord.username} and
+            </if>
+            <if test="oldRecord.password != null">
+                password = #{oldRecord.password} and
+            </if>
+            <if test="oldRecord.createTime != null">
+                create_time = #{oldRecord.createTime} and
+            </if>
+            <if test="oldRecord.lastLoginTime != null">
+                last_login_time = #{oldRecord.lastLoginTime} and
+            </if>
+            <if test="oldRecord.admin != null">
+                admin = #{oldRecord.admin} and
+            </if>
+            <if test="oldRecord.mail != null">
+                mail = #{oldRecord.mail} and
+            </if>
+            <if test="oldRecord.phone != null">
+                phone = #{oldRecord.phone} and
+            </if>
+            <if test="oldRecord.icon != null">
+                icon = #{oldRecord.icon} and
+            </if>
+        </trim>
+    </update>
+    <select id="selectByEntity" parameterType="zone.mcw.mcwzone.springbootmcwform.entity.User" resultType="zone.mcw.mcwzone.springbootmcwform.entity.User">
+        select * from user
+        <trim suffixOverrides=" and ">
+            <if test="userId != null||username != null||password != null||createTime != null||lastLoginTime != null||admin != null||mail != null||phone != null||icon != null">
+                where
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} and
+            </if>
+            <if test="username != null">
+                username = #{username} and
+            </if>
+            <if test="password != null">
+                password = #{password} and
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} and
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time = #{lastLoginTime} and
+            </if>
+            <if test="admin != null">
+                admin = #{admin } and
+            </if>
+            <if test="mail != null">
+                mail = #{mail} and
+            </if>
+            <if test="phone != null">
+                phone = #{phone} and
+            </if>
+            <if test="icon != null">
+                icon = #{icon} and
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityOr" resultType="zone.mcw.mcwzone.springbootmcwform.entity.User">
+        select * from user
+        <trim suffixOverrides=" or ">
+            <if test="userId != null||username != null||password != null||createTime != null||lastLoginTime != null||admin != null||mail != null||phone != null||icon != null">
+                where
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} or
+            </if>
+            <if test="username != null">
+                username = #{username} or
+            </if>
+            <if test="password != null">
+                password = #{password} or
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} or
+            </if>
+            <if test="lastLoginTime != null">
+                last_login_time = #{lastLoginTime} or
+            </if>
+            <if test="admin != null">
+                admin = #{admin } or
+            </if>
+            <if test="mail != null">
+                mail = #{mail} or
+            </if>
+            <if test="phone != null">
+                phone = #{phone} or
+            </if>
+            <if test="icon != null">
+                icon = #{icon} or
+            </if>
+        </trim>
+    </select>
+
+</mapper>

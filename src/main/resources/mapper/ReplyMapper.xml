@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zone.mcw.mcwzone.springbootmcwform.dao.ReplyMapper">
+    <insert id="insertByEntity">
+        insert into reply
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="replyId != null">
+                reply_id,
+            </if>
+            <if test="formId != null">
+                form_id,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="floor != null">
+                floor,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="replyId != null">
+                #{replyId},
+            </if>
+            <if test="formId != null">
+                #{formId},
+            </if>
+            <if test="parentId != null">
+                #{parentId},
+            </if>
+            <if test="content != null">
+                #{content},
+            </if>
+            <if test="floor != null">
+                #{floor},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="state != null">
+                #{state},
+            </if>
+            <if test="userId != null">
+                #{userId},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey">
+      update reply
+        set
+            form_id = #{formId}
+            parent_id = #{parentId}
+            content = #{content}
+            floor = #{floor}
+            create_time = #{createTime}
+            state = #{state}
+            user_id=#{userId}
+        where reply_id = #{replyId}
+  </update>
+    <update id="updateEntityByEntity">
+        update reply
+        set
+        <trim suffixOverrides=",">
+            <if test="newRecord.formId != null">
+                form_id = #{newRecord.formId} ,
+            </if>
+            <if test="newRecord.parentId != null">
+                parent_id = #{newRecord.parentId} ,
+            </if>
+            <if test="newRecord.content != null">
+                content = #{newRecord.content} ,
+            </if>
+            <if test="newRecord.floor != null">
+                floor = #{newRecord.floor} ,
+            </if>
+            <if test="newRecord.createTime != null">
+                create_time = #{newRecord.createTime} ,
+            </if>
+            <if test="newRecord.state != null">
+                state = #{newRecord.state} ,
+            </if>
+            <if test="newRecord.userId != null">
+                user_id = #{newRecord.userId} ,
+            </if>
+        </trim>
+        where
+        <trim suffixOverrides="and">
+            <if test="oldRecord.replyId != null">
+                reply_id = #{oldRecord.replyId} and
+            </if>
+            <if test="oldRecord.formId != null">
+                form_id = #{oldRecord.formId} and
+            </if>
+            <if test="oldRecord.parentId != null">
+                parent_id = #{oldRecord.parentId} and
+            </if>
+            <if test="oldRecord.content != null">
+                content = #{oldRecord.content} and
+            </if>
+            <if test="oldRecord.floor != null">
+                floor = #{oldRecord.floor} and
+            </if>
+            <if test="oldRecord.createTime != null">
+                create_time = #{oldRecord.createTime} and
+            </if>
+            <if test="oldRecord.state != null">
+                state = #{oldRecord.state} and
+            </if>
+            <if test="oldRecord.userId != null">
+                user_id = #{oldRecord.userId} and
+            </if>
+        </trim>
+    </update>
+    <delete id="deleteByPrimaryKey">
+        delete from reply
+    where reply_id = #{replyId}
+  </delete>
+    <delete id="deleteByFormId">
+        delete form replay
+        where form_id=#{formId}
+    </delete>
+    <select id="selectByEntity" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Reply">
+        select * from reply
+        <trim suffixOverrides=" and ">
+            <if test="replyId != null||formId != null||parentId != null||content != null||floor != null||createTime != null||state != null||userId != null">
+                where
+            </if>
+            <if test="replyId != null">
+                reply_id = #{replyId} and
+            </if>
+            <if test="formId != null">
+                form_id = #{formId} and
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId} and
+            </if>
+            <if test="content != null">
+                content = #{content} and
+            </if>
+            <if test="floor != null">
+                floor = #{floor} and
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} and
+            </if>
+            <if test="state != null">
+                state = #{state} and
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} and
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityOr" resultType="zone.mcw.mcwzone.springbootmcwform.entity.Reply">
+        select * from reply
+        <trim suffixOverrides=" or ">
+            <if test="replyId != null||formId != null||parentId != null||content != null||floor != null||createTime != null||state != null||userId != null">
+                where
+            </if>
+            <if test="replyId != null">
+                reply_id = #{replyId} or
+            </if>
+            <if test="formId != null">
+                form_id = #{formId} or
+            </if>
+            <if test="parentId != null">
+                parent_id = #{parentId} or
+            </if>
+            <if test="content != null">
+                content = #{content} or
+            </if>
+            <if test="floor != null">
+                floor = #{floor} or
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime} or
+            </if>
+            <if test="state != null">
+                state = #{state} or
+            </if>
+            <if test="userId != null">
+                user_id = #{userId} or
+            </if>
+        </trim>
+    </select>
+    <select id="selectByEntityLike" resultType="zone.mcw.mcwzone.springbootmcwform.dto.ReplyDto">
+        SELECT reply.*,user.username,user.icon FROM reply , user  where user.user_id=reply.user_id
+        <if test="param1!=null and param1!=''">
+            and form_id=#{param1}
+        </if>
+        <if test="param2!=null and param2!=''">
+            and content like #{param2}
+        </if>
+        <if test="param3!=null and param3!=''">
+            and reply.state=#{param3}
+        </if>
+        <if test="param4!='' and param4!=null">
+            and  reply.create_time &gt; #{param4}
+        </if>
+        <if test="param5!='' and param5!=null">
+            and  reply.create_time &lt; #{param5}
+        </if>
+        limit #{start},#{pageSize}
+    </select>
+</mapper>
