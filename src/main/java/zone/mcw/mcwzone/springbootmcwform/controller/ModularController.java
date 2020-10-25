@@ -1,6 +1,5 @@
 package zone.mcw.mcwzone.springbootmcwform.controller;
 
-
 import zone.mcw.mcwzone.springbootmcwform.dto.Result;
 import zone.mcw.mcwzone.springbootmcwform.entity.Modular;
 import zone.mcw.mcwzone.springbootmcwform.service.IModularService;
@@ -19,18 +18,37 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ModularController {
 	@Autowired IModularService iModularService;
 
+	/**
+	 * 添加模块
+	 *
+	 * @param modularName
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("/adminAdd")
 	public Result adminAdd(String modularName) {
 		return iModularService.add(modularName);
 	}
 
+	/**
+	 * 改变模块状态
+	 *
+	 * @param modularId
+	 * @param state
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("/adminChangeState")
 	public Result adminChangeState(int modularId, int state) {
 		return iModularService.changeState(modularId, state);
 	}
 
+	/**
+	 * 删除模块
+	 *
+	 * @param modularId
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("/adminDelete")
 	public Result adminDelete(int modularId) {
@@ -41,6 +59,13 @@ public class ModularController {
 		return result;
 	}
 
+	/**
+	 * 查询模块
+	 *
+	 * @param modularName
+	 * @param state
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping("/getModular")
 	public Result getModular(String modularName, Integer state) {

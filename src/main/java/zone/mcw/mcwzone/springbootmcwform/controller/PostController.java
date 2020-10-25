@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
+ * 已被废除，通过FormDto替换
+ *
  * @author by W4i
  * @date 2020/10/11 15:32
  */
@@ -25,6 +27,5 @@ public class PostController {
 	public Result getPost(Integer formId) {
 		return null;
 	}
-
 
 }

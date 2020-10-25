@@ -23,18 +23,42 @@ public class AdminController {
 	@Autowired ILogService iLogService;
 	@Autowired IBanService iBanService;
 
+	/**
+	 * 用户封禁
+	 *
+	 * @param userId
+	 * @param info
+	 * @param banTime
+	 * @return
+	 */
 	@PostMapping("/ban")
 	@ResponseBody
 	public Result ban(int userId, String info, String banTime) {
 		return iBanService.banUser(userId, info, banTime);
 	}
 
+	/**
+	 * 用户解封
+	 *
+	 * @param userId
+	 * @param info
+	 * @return
+	 */
 	@PostMapping("/unban")
 	@ResponseBody
 	public Result unban(int userId, String info) {
 		return iBanService.unbanUser(userId, info);
 	}
 
+	/**
+	 * 查看banb表
+	 *
+	 * @param page
+	 * @param pageSize
+	 * @param order
+	 * @param desc
+	 * @return
+	 */
 	@PostMapping("/banSearch")
 	@ResponseBody
 	public Result banSearch(@RequestParam(defaultValue = "1") int page,
@@ -44,12 +68,27 @@ public class AdminController {
 		return iBanService.selectByPage(page, pageSize, order, desc);
 	}
 
+	/**
+	 * 查找用户是否被ban
+	 *
+	 * @param userId
+	 * @return
+	 */
 	@PostMapping("/banCheck")
 	@ResponseBody
 	public Result banCheck(int userId) {
 		return iBanService.banCheckByUserId(userId);
 	}
 
+	/**
+	 * 搜索日志
+	 *
+	 * @param page
+	 * @param pageSize
+	 * @param order
+	 * @param desc
+	 * @return
+	 */
 	@PostMapping("/logSearch")
 	@ResponseBody
 	public Result logSearch(

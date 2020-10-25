@@ -19,24 +19,55 @@ import org.springframework.web.multipart.MultipartFile;
 public class ReplyController {
 	@Autowired IReplyService iReplyService;
 
+	/**
+	 * 回帖
+	 *
+	 * @param reply
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("doReply")
 	public Result doReply(Reply reply) {
 		return iReplyService.doReply(reply);
 	}
 
+	/**
+	 * 删除回复
+	 *
+	 * @param replyId
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("adminDeleteReply")
 	public Result adminDeleteReply(Integer replyId) {
 		return iReplyService.adminDeleteReply(replyId);
 	}
 
+	/**
+	 * 盖面回复状态
+	 *
+	 * @param replyId
+	 * @param state
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("adminChangeState")
 	public Result adminChangeState(int replyId, Integer state) {
 		return iReplyService.adminChangeState(replyId, state);
 	}
 
+	/**
+	 * 搜索回复
+	 *
+	 * @param formId
+	 * @param content
+	 * @param state
+	 * @param startTime
+	 * @param endTime
+	 * @param page
+	 * @param pageSize
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("searchReply")
 	public Result searchReply(Integer formId, String content, Integer state, String startTime, String endTime,
@@ -45,6 +76,12 @@ public class ReplyController {
 		return iReplyService.searchReply(formId, content, state, startTime, endTime, page, pageSize);
 	}
 
+	/**
+	 * 上传图片/文件
+	 *
+	 * @param file
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("doUpdatePic")
 	public Result doUpdatePic(MultipartFile file) {
